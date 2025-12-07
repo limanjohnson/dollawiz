@@ -39,6 +39,14 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_login: ^6.0.0
 
+  # Firebase
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.3.4
+  cloud_firestore: ^5.6.0
+
+  # Charts
+  fl_chart: ^0.69.0
+
   crypto: any
   path: any
 dev_dependencies:

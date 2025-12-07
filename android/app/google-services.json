@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "393671893802",
+    "project_id": "dollawiz-4efda",
+    "storage_bucket": "dollawiz-4efda.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393671893802:android:5f7e9daa8c605f5b1a3453",
+        "android_client_info": {
+          "package_name": "com.example.my_finance_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfpuMsw1w6C8PHWXA1GL3WQZx6FZEg2Qg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyASeSB9JZb6BZSw9rbTtyH86LirA2u712I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>393671893802</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.myFinanceTracker</string>
+	<key>PROJECT_ID</key>
+	<string>dollawiz-4efda</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dollawiz-4efda.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:393671893802:ios:61499e808635c7b61a3453</string>
+</dict>
+</plist>

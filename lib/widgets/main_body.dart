@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_finance_tracker/pages/add_transaction_page.dart';
 import '../pages/dashboard_page.dart';
 import '../pages/reports_page.dart';
 import '../pages/transaction_page.dart';
+import '../services/auth_service.dart';
 import '../pages/login_page.dart';
 
 class MainBody extends StatelessWidget {
@@ -43,6 +43,46 @@ class MainBody extends StatelessWidget {
                 child: Text("Dashboard")
             ),
             SizedBox(width: 32.0),
+
+            PopupMenuButton<String>(
+              color: Colors.white,
+              offset: const Offset(0, 40),
+              position: PopupMenuPosition.under,
+              onSelected: (value) {
+                if (value == 'add') {
+                  _navigate(context, const TransactionPage(showAddTransactionDialog: true));
+                } else if (value == 'view') {
+                  _navigate(context, const TransactionPage());
+                }
+              },
+              itemBuilder: (context) => [
+                PopupMenuItem<String>(
+                  value: 'add',
+                  height: 48,
+                  child: const SizedBox(
+                    width: 160,
+                    child: Text('Add Transaction'),
+                  ),
+                ),
+                PopupMenuItem<String>(
+                  value: 'view',
+                  height: 48,
+                  child: const SizedBox(
+                    width: 160,
+                    child: Text('View Transactions'),
+                  ),
+                ),
+              ],
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('Transactions', style: TextStyle(color: Colors.white)),
+                  Icon(Icons.arrow_drop_down, color: Colors.white),
+                ],
+              ),
+            ),
+            SizedBox(width: 32.0),
+
             TextButton(
                 onPressed: () {
                   _navigate(context, ReportsPage());
@@ -50,29 +90,19 @@ class MainBody extends StatelessWidget {
                 child: Text("Reports")
             ),
             SizedBox(width: 32.0),
-            PopupMenuButton<String>(
-              color: Colors.white,
-              offset: Offset(50, 40),
-              onSelected: (value) {
-                if (value == 'add') {
-                  _navigate(context, AddTransactionPage());
-                } else if (value == 'view') {
-                  _navigate(context, TransactionPage());
-                }
+            IconButton(
+              onPressed: () async {
+                // Navigate first to avoid stream errors, then sign out
+                Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (_) => LoginPage()),
+                  (route) => false,
+                );
+                await AuthService().signOut();
               },
-              itemBuilder: (context) => [
-                const PopupMenuItem<String>(
-                  value: 'add',
-                  child: Text('Add Transaction'),
-                ),
-                const PopupMenuItem<String>(
-                  value: 'view',
-                  child: Text('View Transactions'),
-                ),
-              ],
-              child: const Text('Transactions', style: TextStyle(color: Colors.white)),
+              icon: const Icon(Icons.logout),
+              tooltip: 'Logout',
             ),
-            SizedBox(width: 32.0),
+            SizedBox(width: 16.0),
           ]
       ),
       body: child,
