@@ -1,12 +1,8 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
 This is a personal finance app written using the Flutter framework. It stores data using the Firebase Cloud Service by Google. A user can create an account and then log their transactions which will be stored so they can access them from different devices and keep their data saved between use sessions.
 
 The pupose in writing this software was to practice using Flutter and using a cloud database to store data.
-
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
 
 [Software Demo Video](https://youtu.be/W2gfxQcvy24)
 
@@ -24,13 +20,9 @@ Flutter and Dart dependencies were used in this project. The main langauge in th
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
 - [Flutter Official Documentation](https://docs.flutter.dev/ui)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
 
 - Goals Page
 - Budget page
